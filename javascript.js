@@ -4,7 +4,7 @@ var projectTagline = document.querySelector(".project-tagline");
 var headerElements = document.querySelector(".header-elements");
 var projectTaglineSecondary = document.querySelector(".project-tagline-secondary");
 var secondRow = document.querySelector(".second-row");
-var circle = document.querySelector(".circle");
+var topHeader = document.querySelector(".top-header");
 
 
 var animateLogos = function(){
@@ -20,7 +20,6 @@ var animateLogos = function(){
 }
 
 
-
 var scrollAction = function(){
   var currentScrollPos = window.pageYOffset;
   var currentPositionOfheaderElements = 95 + currentScrollPos;
@@ -31,9 +30,7 @@ var scrollAction = function(){
 
     var circleSize = (currentScrollPos )/ 2;
 
-    circle.style.height = circleSize + "px";
-
-
+    topHeader.style.height = circleSize + "px";
 
     pageHeader.style.top = -currentScrollPos + "px";
     secondRow.style.top = -currentScrollPos + 450 + "px";
@@ -47,29 +44,27 @@ var scrollAction = function(){
 
         projectTagline.style.opacity = opacity;
         projectName.style.opacity = opacity;
-        projectName.style.fontSize = opacity  + "rem";
+        // projectName.style.fontSize = opacity  + "rem";
 
 
-
-
-        if (fontSize <= 4) {
-          projectName.style.fontSize =  fontSize  + "rem";
-          projectName.style.lineHeight = fontSize  + "rem";
-
-
-        }
-        if(fontSize <= 1 ){
-            fontSize = 1
-            projectName.style.fontSize =  1 + "rem";
-            projectName.style.lineHeight = 1  + "rem";
-            projectName.style.opacity = 0;
-            projectTagline.style.opacity = 0;
-
-
-        }
+        // if (fontSize <= 4) {
+        //   projectName.style.fontSize =  fontSize  + "rem";
+        //   projectName.style.lineHeight = fontSize  + "rem";
+        //
+        //
+        // }
+        // if(fontSize <= 1 ){
+        //     fontSize = 1
+        //     projectName.style.fontSize =  1 + "rem";
+        //     projectName.style.lineHeight = 1  + "rem";
+        //     projectName.style.opacity = 0;
+        //     projectTagline.style.opacity = 0;
+        //
+        //
+        // }
 
         if(circleSize >= 170) {
-            circle.style.height = 170 + "px";
+            topHeader.style.height = 170 + "px";
         }
 
         // if( secondarySize >= 350) {
@@ -107,7 +102,7 @@ var scrollAction = function(){
       headerElements.style.marginTop = 0;
       headerElements.style.top = 200 + "px";
       secondRow.style.height = 0 + "px";
-      circle.style.height = 0 + "px";
+      topHeader.style.height = 0 + "px";
 
 
 

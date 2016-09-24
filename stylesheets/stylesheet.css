@@ -120,13 +120,23 @@ padding: 0 10px;
 
 
 
-.circle {
+.circle-image{
 
+  width: 150px;
+  height: 150px;
+   /*background-color: white;*/
+   border-radius: 100%;
+  display: inline-block;
+  margin: 20px;
+  background-image: url('../images/pawelurbanski.jpg');
+  background-size: contain;
+}
+
+.top-header {
   width: 100%;
   z-index: 99;
   /*border-radius: 100%;*/
   background-color: white;
-
   position: fixed;
 
 
