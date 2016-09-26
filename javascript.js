@@ -19,17 +19,17 @@ var animateLogos = function(){
         }, 200)
 }
 
-var defaultSettings = headerElements.getBoundingClientRect().top;
-var getDefaultSettings = function(){
-  console.log("o");
-  defaultSettings = headerElements.getBoundingClientRect().top;
-};
-
+if(headerElements.getBoundingClientRect().top > 0 ){
+  var defaultSettings = headerElements.getBoundingClientRect().top;
+} else {
+  var defaultSettings = 110;
+}
 
 var scrollAction = function(){
 var currentScrollPos = 0;
 
   var incrimentConstant = function(){
+
       var c = (defaultSettings +  (currentScrollPos * 3) ) ;
     return (c);
   };
@@ -65,7 +65,6 @@ var currentScrollPos = 0;
 
         }
 
-
       }
 
       if (currentScrollPos < 70 && projectName.classList.contains("tansition-name")) {
@@ -76,13 +75,13 @@ var currentScrollPos = 0;
           projectName.classList.remove("tansition-name");
           projectTaglineSecondary.innerHTML = "";
 
-
       }
 
     }
 
     else if (currentScrollPos <= 1){
       //reset things
+
       projectTagline.style.opacity = 1;
       projectName.style.opacity = 1;
       projectName.style.fontSize = 3.9 + "rem";
@@ -92,20 +91,10 @@ var currentScrollPos = 0;
       secondRow.style.height = 0 + "px";
       topHeader.style.height = 0 + "px";
 
-
-
-
-
     }
-
-
 
     if(currentScrollPos > 200){
         animateLogos();
     }
-
-
-
-
 
 }

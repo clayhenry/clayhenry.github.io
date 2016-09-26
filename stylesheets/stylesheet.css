@@ -114,8 +114,22 @@ padding: 0 10px;
   width:45px;
 }
 
+.external ul{
+ list-style-type: none;
+ margin: 0;
+ padding: 15px;
 
+}
 
+.external li {
+
+  display: inline;
+  padding: 0 10px 0 0 ;
+}
+
+.external img {
+  width:25px;
+}
 
 
 
