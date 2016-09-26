@@ -5,7 +5,7 @@ var headerElements = document.querySelector(".header-elements");
 var projectTaglineSecondary = document.querySelector(".project-tagline-secondary");
 var secondRow = document.querySelector(".second-row");
 var topHeader = document.querySelector(".top-header");
-
+var topInfo = document.querySelector(".top-info");
 
 var animateLogos = function(){
       var allLogos = document.querySelectorAll(".logos");
@@ -44,6 +44,8 @@ var scrollAction = function(){
 
         projectTagline.style.opacity = opacity;
         projectName.style.opacity = opacity;
+        topInfo.style.marginTop = ( opacity * 22) + 130 +"px";
+
         // projectName.style.fontSize = opacity  + "rem";
 
 
@@ -65,6 +67,8 @@ var scrollAction = function(){
 
         if(circleSize >= 170) {
             topHeader.style.height = 170 + "px";
+              topInfo.style.marginTop = 20 + "px"
+
         }
 
         // if( secondarySize >= 350) {

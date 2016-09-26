@@ -98,9 +98,10 @@ padding: 0 10px;
   list-style-type: none;
   display: inline;
   padding: 0 20px;
+
 }
 .technology img {
-  width:55px;
+  width:45px;
 }
 
 
@@ -133,14 +134,35 @@ padding: 0 10px;
 }
 
 .top-header {
+  font-family: 'Roboto Slab', serif;
   width: 100%;
   z-index: 99;
+  height: 0;
   /*border-radius: 100%;*/
   background-color: white;
   position: fixed;
-
+  overflow: hidden;
+  text-align: center;
 
 }
+
+.top-info {
+
+  margin-top:160px;
+}
+
+.top-header h1 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.top-header h2 {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 0 3px;
+}
+
+
 
 
 .project-tagline {
