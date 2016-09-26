@@ -20,21 +20,22 @@ var animateLogos = function(){
 }
 
 var defaultSettings = headerElements.getBoundingClientRect().top;
-
 var getDefaultSettings = function(){
   defaultSettings = headerElements.getBoundingClientRect().top;
 };
 
 
 var scrollAction = function(){
+var currentScrollPos = 0;
 
-  console.log(defaultSettings);
-
+  var incrimentConstant = function(){
+      var c = (defaultSettings +  (currentScrollPos * 3) ) ;
+    return (c);
+  };
 
   var currentScrollPos = window.pageYOffset;
-  var currentPositionOfheaderElements = 95 + currentScrollPos;
-    headerElements.style.top = (currentScrollPos + 40) * 5 + "px";
 
+  headerElements.style.top =  incrimentConstant()   + "px";
 
   if(currentScrollPos > 1){
 
@@ -46,15 +47,15 @@ var scrollAction = function(){
     secondRow.style.top = -currentScrollPos + 450 + "px";
 
 
-      if(currentScrollPos > 50) {
+      if(currentScrollPos > 60) {
 
-          var opacity =  1 + (( - currentScrollPos + 50 )/ 100) *2 ;
+          var opacity =  1 + (( - currentScrollPos + 60 )/ 100)  ;
           var fontSize = (1 + ( (  -currentScrollPos + 100 ) / 10) / 2) ;
 
 
         projectTagline.style.opacity = opacity;
         projectName.style.opacity = opacity;
-        topInfo.style.marginTop = ( opacity * 22) + 130 +"px";
+        topInfo.style.marginTop = ( opacity * 62) + 130 +"px";
 
 
         if(circleSize >= 170) {
