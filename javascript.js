@@ -19,8 +19,18 @@ var animateLogos = function(){
         }, 200)
 }
 
+var defaultSettings = headerElements.getBoundingClientRect().top;
+
+var getDefaultSettings = function(){
+  defaultSettings = headerElements.getBoundingClientRect().top;
+};
+
 
 var scrollAction = function(){
+
+  console.log(defaultSettings);
+
+
   var currentScrollPos = window.pageYOffset;
   var currentPositionOfheaderElements = 95 + currentScrollPos;
     headerElements.style.top = (currentScrollPos + 40) * 5 + "px";
@@ -28,10 +38,10 @@ var scrollAction = function(){
 
   if(currentScrollPos > 1){
 
+
     var circleSize = (currentScrollPos )/ 2;
 
     topHeader.style.height = circleSize + "px";
-
     pageHeader.style.top = -currentScrollPos + "px";
     secondRow.style.top = -currentScrollPos + 450 + "px";
 
@@ -46,24 +56,6 @@ var scrollAction = function(){
         projectName.style.opacity = opacity;
         topInfo.style.marginTop = ( opacity * 22) + 130 +"px";
 
-        // projectName.style.fontSize = opacity  + "rem";
-
-
-        // if (fontSize <= 4) {
-        //   projectName.style.fontSize =  fontSize  + "rem";
-        //   projectName.style.lineHeight = fontSize  + "rem";
-        //
-        //
-        // }
-        // if(fontSize <= 1 ){
-        //     fontSize = 1
-        //     projectName.style.fontSize =  1 + "rem";
-        //     projectName.style.lineHeight = 1  + "rem";
-        //     projectName.style.opacity = 0;
-        //     projectTagline.style.opacity = 0;
-        //
-        //
-        // }
 
         if(circleSize >= 170) {
             topHeader.style.height = 170 + "px";
@@ -71,19 +63,6 @@ var scrollAction = function(){
 
         }
 
-        // if( secondarySize >= 350) {
-        //         secondRow.style.height  = 350 + "px";
-        // }
-
-      }
-
-
-      if (currentScrollPos > 70 && !projectName.classList.contains("tansition-name")) {
-        // headerElements.style.position= "initial";
-        // headerElements.style.marginTop = 300 + "px";
-        // headerElements.classList.add("transition-elements");
-        // projectName.classList.add("tansition-name");
-        // projectTaglineSecondary.innerHTML = " <br /> Web Developer"
 
       }
 
@@ -95,16 +74,19 @@ var scrollAction = function(){
           projectName.classList.remove("tansition-name");
           projectTaglineSecondary.innerHTML = "";
 
+
       }
 
-    } else if (currentScrollPos <= 1){
+    }
+
+    else if (currentScrollPos <= 1){
       //reset things
       projectTagline.style.opacity = 1;
       projectName.style.opacity = 1;
       projectName.style.fontSize = 3.9 + "rem";
       projectName.style.lineHeight = 3.9 + "rem";
       headerElements.style.marginTop = 0;
-      headerElements.style.top = 200 + "px";
+      headerElements.style.top = defaultSettings + "px";
       secondRow.style.height = 0 + "px";
       topHeader.style.height = 0 + "px";
 

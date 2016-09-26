@@ -49,6 +49,16 @@ a {
   text-align: center;
 
 }
+
+@media screen and (max-width: 42em) {
+  .header-elements {
+    top: 70px;}
+
+
+   }
+
+
+
 .page-header {
   color: white;
 font-family: 'Roboto Slab', serif;
