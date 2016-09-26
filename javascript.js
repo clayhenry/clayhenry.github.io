@@ -21,6 +21,7 @@ var animateLogos = function(){
 
 var defaultSettings = headerElements.getBoundingClientRect().top;
 var getDefaultSettings = function(){
+  console.log("o");
   defaultSettings = headerElements.getBoundingClientRect().top;
 };
 
