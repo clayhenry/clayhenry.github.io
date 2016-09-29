@@ -39,20 +39,16 @@ var currentScrollPos = 0;
   headerElements.style.top =  incrimentConstant()   + "px";
 
   if(currentScrollPos > 1){
-
-
     var circleSize = (currentScrollPos )/ 2;
 
     topHeader.style.height = circleSize + "px";
     pageHeader.style.top = -currentScrollPos + "px";
     secondRow.style.top = -currentScrollPos + 450 + "px";
 
-
       if(currentScrollPos > 60) {
 
           var opacity =  1 + (( - currentScrollPos + 60 )/ 100)  ;
           var fontSize = (1 + ( (  -currentScrollPos + 100 ) / 10) / 2) ;
-
 
         projectTagline.style.opacity = opacity;
         projectName.style.opacity = opacity;
@@ -62,7 +58,6 @@ var currentScrollPos = 0;
         if(circleSize >= 170) {
             topHeader.style.height = 170 + "px";
               topInfo.style.marginTop = 20 + "px"
-
         }
 
       }
@@ -93,7 +88,7 @@ var currentScrollPos = 0;
 
     }
 
-    if(currentScrollPos > 200){
+    if(currentScrollPos > 320){
         animateLogos();
     }
 

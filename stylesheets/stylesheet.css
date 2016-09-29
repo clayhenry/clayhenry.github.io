@@ -53,9 +53,22 @@ a {
 @media screen and (max-width: 42em) {
   .header-elements {
     top: 70px;}
+.main-content {
 
+      padding: 2rem;
+}
 
    }
+
+
+   @media screen and (min-width: 42em) {
+
+       .main-content {
+
+         padding: 2rem 6rem;
+   }
+
+      }
 
 
 
@@ -72,7 +85,7 @@ font-family: 'Roboto Slab', serif;
       background-color: #ed124b;
       height: 850px;
       overflow: hidden;
-
+z-index: 1;
 
 }
 
@@ -103,7 +116,9 @@ padding: 0 10px;
   top:450px;
 }
 
-
+.technology {
+  text-align: center;
+}
 .technology ul li{
   list-style-type: none;
   display: inline;
@@ -210,18 +225,22 @@ font-family: 'Roboto Slab', serif;
     .main-content {
 
       position: absolute;
-      top: 90%;
-      max-width: 64rem;
-      padding: 2rem 6rem;
+      top: 70%;
+      /*max-width: 64rem;*/
+      /*padding: 2rem 6rem;*/
       margin: 0 auto;
       font-size: 1.1rem;
+      z-index: 0;
     }
 
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: #159957; }
+  color: #ed124b;
+  text-align: center;
+
+}
 .main-content p {
   margin-bottom: 1em; }
  code {
