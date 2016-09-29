@@ -119,10 +119,15 @@ padding: 0 10px;
 .technology {
   text-align: center;
 }
+.technology  ul {
+  padding:0;
+  margin:0;
+}
+
 .technology ul li{
   list-style-type: none;
   display: inline;
-  padding: 0 20px;
+  padding-left: 20px;
 
 }
 .technology img {
