@@ -50,8 +50,8 @@ var currentScrollPos = 0;
           var opacity =  1 + (( - currentScrollPos + 60 )/ 100)  ;
           var fontSize = (1 + ( (  -currentScrollPos + 100 ) / 10) / 2) ;
 
-        projectTagline.style.opacity = opacity;
-        projectName.style.opacity = opacity;
+        // projectTagline.style.opacity = opacity;
+        // projectName.style.opacity = opacity;
         topInfo.style.marginTop = ( opacity * 62) + 130 +"px";
 
 
@@ -77,8 +77,8 @@ var currentScrollPos = 0;
     else if (currentScrollPos <= 1){
       //reset things
 
-      projectTagline.style.opacity = 1;
-      projectName.style.opacity = 1;
+      // projectTagline.style.opacity = 1;
+      // projectName.style.opacity = 1;
       projectName.style.fontSize = 3.9 + "rem";
       projectName.style.lineHeight = 3.9 + "rem";
       headerElements.style.marginTop = 0;
