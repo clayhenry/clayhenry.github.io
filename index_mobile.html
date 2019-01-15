@@ -10,29 +10,7 @@
 
 </head>
 
-<script>
-
-if((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)){
-
-
-var req = new XMLHttpRequest();
-
-req.onload = function() {
-    document.getElementById('loadmobileHere').innerHTML = this.responseText;
-}
-
-req.open("get", "index_mobile.html", true);
-req.send();
-
-
-}
-
-
-</script>
-
-
-
-<body id="loadmobileHere">
+<body >
 
     <style>
 
@@ -56,13 +34,13 @@ req.send();
         margin:15%;
         max-width: 900px;
         min-width: 300px;
-        position: relative;
+
         }
 
      .subContent {
 
         transition: all 0.8s;
-        padding: 15px; color: white; position: relative; z-index: 9
+        padding: 15px; color: white; z-index: 9
     }
 
 
@@ -80,7 +58,7 @@ req.send();
 
         .sizemeup {
             transition: width 0.4s, height 0.4s;
-            position: absolute;
+
             bottom: 0;
             /* overflow: hidden; */
         }
@@ -90,20 +68,20 @@ req.send();
             height: 100%;
             left: 0;
             top: 0;
-            position: fixed;
+      
         }
         
         #cont {
-            position: absolute;
+    
             top: 6780px;
         }
         
         .contents {
-            position: fixed;
+     
             width: 100%;
             top: 0;
             /* height: 85%; */
-            overflow: hidden;
+          
         }
         
         .content {
@@ -111,7 +89,7 @@ req.send();
             text-align: left;
             background-color: aquamarine;
             justify-content: normal;
-            position: absolute;
+  
         }
         
         .content.second {
@@ -143,7 +121,7 @@ req.send();
 
 
     .logo {
-        position:fixed;
+     
         z-index: 999;
     }
 
@@ -174,12 +152,12 @@ req.send();
     .h1-intro2 {
         clip-path: inset(0% 0 0 0);
         background-color:white;
-        position: relative;
+    
     }
 
     .h1-intro1 h1 {
        
-         position: relative;
+     
          animation-name: intotext;
          animation-duration: 0.5s;
          font-size: 50px;
@@ -191,7 +169,7 @@ req.send();
             }
     .h1-intro2 h1 {
         top: -48px;
-        position: relative;
+     
         animation-name: intotext2;
         animation-duration: 0.5s;
         animation-delay: 0.2s;
@@ -223,7 +201,7 @@ req.send();
   
   .outro {
 
-        position: relative; 
+    
         margin: 5% 15%;
         max-width: 900px;
         min-width: 400px;
@@ -240,13 +218,13 @@ req.send();
      .subContent {
 
         transition: all 0.8s;
-        padding: 25px; color: white; position: relative; z-index: 9
+        padding: 25px; color: white;  z-index: 9
     }
 
 
       .outro {
 
-                position: relative; 
+               
                 margin: 5%;
                 max-width: 900px;
                 min-width: 400px;
@@ -256,7 +234,7 @@ req.send();
      
     .h1-intro1 h1 {
        
-       position: relative;
+       
        animation-name: intotext;
        animation-duration: 0.5s;
        font-size: 40px;
@@ -268,7 +246,7 @@ req.send();
           }
   .h1-intro2 h1 {
       top: -48px;
-      position: relative;
+     
       animation-name: intotext2;
       animation-duration: 0.5s;
       animation-delay: 0.2s;
@@ -300,7 +278,7 @@ req.send();
      .subContent {
 
         transition: all 0.8s;
-        padding: 25px; color: white; position: relative; z-index: 9
+        padding: 25px; color: white;  z-index: 9
         }
 
 
@@ -321,7 +299,7 @@ req.send();
     
     .outro {
 
-                    position: relative; 
+                 
                     margin: 5% 15%;
                     max-width: 900px;
                     min-width: 400px;
@@ -331,7 +309,7 @@ req.send();
  
  .h1-intro1 h1 {
        
-       position: relative;
+   
        animation-name: intotext;
        animation-duration: 0.5s;
        font-size: 50px;
@@ -343,7 +321,7 @@ req.send();
           }
   .h1-intro2 h1 {
       top: -48px;
-      position: relative;
+  
       animation-name: intotext2;
       animation-duration: 0.5s;
       animation-delay: 0.2s;
@@ -372,7 +350,7 @@ req.send();
 
             transition: all 0.8s;
             padding:30px 65px 0 0; color: white; 
-            position: relative; 
+         
             z-index: 9;
             margin-left: 10%;
             }
@@ -380,7 +358,7 @@ req.send();
 
                 .outro {
 
-position: relative; 
+
 margin: 5% 15%;
 max-width: 900px;
 min-width: 400px;
@@ -390,12 +368,10 @@ min-width: 400px;
  
 
     </style>
-    
-    <div style="overflow-x: hidden">
  <!-- <div class="logo">Logo</div> -->
     <div id="container">
        
-        <div id="default" class="sizemeup" style="background: white; width:100%; height: 0px; overflow: visible">
+        <div id="default" class="sizemeup" style="background: white; width:100%;">
             <div class="contents">
                 <div id="intro1">
                     <div class="h1-intro1"><h1>Hi, I'm Pawel Urbanski. </h1></div>
@@ -410,8 +386,8 @@ min-width: 400px;
             </div>
 
 
-            <div class="sizemeup" style="background:linear-gradient(45deg, #da655f 43%,#ff70c3 100%); width:100%; height: 80px; bottom: 0;  overflow:hidden;">
-                <div class="contents into" style="position: relative;">
+            <div class="sizemeup" style="background:linear-gradient(45deg, #da655f 43%,#ff70c3 100%); width:100%;bottom: 0;">
+                <div class="contents into">
 
                     <div class="subContent"> 
 
@@ -433,8 +409,8 @@ min-width: 400px;
                     </div>
                 </div>
 
-                <div class="sizemeup" style="background: linear-gradient(45deg, #da9d5f 44%,#e5e164 100%); width:100%; height: 0px; z-index: 9;">
-                    <div class="contents"  style="position: relative; ">
+                <div class="sizemeup" style="background: linear-gradient(45deg, #da9d5f 44%,#e5e164 100%); width:100%;z-index: 9;">
+                    <div class="contents"  style=" ">
                         <div class="subContent"> 
 
                             <div class="bacgimg">
@@ -453,8 +429,8 @@ min-width: 400px;
                     
                     </div>
 
-                    <div id="three" class="sizemeup" style="background:  linear-gradient(45deg, #5fc3da 44%,#68edaf 100%); width:100%; height: 0px; z-index: 9;">
-                        <div class="contents" style="position: relative">
+                    <div id="three" class="sizemeup" style="background:  linear-gradient(45deg, #5fc3da 44%,#68edaf 100%); width:100%; z-index: 9;">
+                        <div class="contents" style="">
                             <div class="subContent"> 
 
                                 <div class="bacgimg">
@@ -481,7 +457,7 @@ min-width: 400px;
             </div>
 
 
-            <div id="four" class="sizemeup" style="background: white; width:100%; height: 0px; z-index: 9; ">
+            <div id="four" class="sizemeup" style="background: white; width:100%; z-index: 9; ">
                     <div class="outro">
                         <div class="subContent"> 
 
@@ -606,245 +582,10 @@ min-width: 400px;
 
 
 
-    <div style="height:7000px">
-                      
-    </div>
-
-
-
-<script>
-        //always start from top
-        setTimeout(function() {
-            window.scrollTo(0, 0)
-        }, 200)
-
-        let sizeupelems = document.querySelectorAll(".sizemeup");
-        let container = document.getElementById("container");
-        let currentContentsValues = document.querySelectorAll(".contents")
-    
-        let contunueContent = document.querySelector("#cont");
-        let logo = document.querySelector("#cont");
-        let intoContainer = document.getElementById("intro1");
-        let scrollDirection = ""
-        let scrollEvents = 0;
-        let instanceCounts = 0
-        let currentOffset = window.pageYOffset;
-        let marginTop = 0;
-   
-        readMore = (index) =>{
-            currentContentsValues[1].querySelector(".bacgimg").style.marginTop=  "-500px"             
-        }
-        sizeup = () => {
-
-            let h = sizeupelems[instanceCounts].clientHeight
-            let w = sizeupelems[instanceCounts].clientWidth
-
-            let contentCont = sizeupelems[instanceCounts].querySelector(".contents");
-          
-
-            if (scrollDirection == "down") {
-                sizeupelems[instanceCounts].style.height = (window.innerHeight) + "px";
-                if (typeof sizeupelems[instanceCounts + 1] != "undefined") {
-                    sizeupelems[instanceCounts + 1].style.height = (80) + "px";
-            
-                }
-                for(i = 1; i<= 3; i++ ){
-                      if(instanceCounts == i){
-                        currentContentsValues[i].querySelector(".animateImage").style.marginTop = "-40px";
-                    } 
-                }
-            }
-          
-            if (scrollDirection == "up") {
-           
-
-                let downIndex = instanceCounts + 1;
-
-                    for(i = 1; i<= 3; i++ ){
-                      if(instanceCounts == i){
-                        currentContentsValues[i].querySelector(".animateImage").style.marginTop = "0px";
-                    } 
-                }
-            
-                if (typeof(sizeupelems[downIndex]) != "undefined") {
-                    sizeupelems[downIndex].style.height = "80px";
-                    
-                    if (typeof sizeupelems[downIndex + 1] != "undefined") {
-                        sizeupelems[downIndex + 1].style.height = "0px"
-                    
-                        
-                    };
-                }
-            }
-        }
-
-        
-        //sizeup();
-
-        document.addEventListener("scroll", (e) => {
-     
-            currentContentsValues[1].querySelector(".bacgimg").style.marginTop = - (window.pageYOffset / 20) + 150  + "px";
-            currentContentsValues[2].querySelector(".bacgimg").style.marginTop = - (window.pageYOffset / 20) + 270  + "px";
-            currentContentsValues[3].querySelector(".bacgimg").style.marginTop = - (window.pageYOffset / 20) + 310  + "px";
-          
-            // currentContentsValues[1].querySelector(".subContent").style.marginTop = - window.pageYOffset / 20 + "px";
-            // currentContentsValues[2].querySelector(".subContent").style.marginTop = - (window.pageYOffset / 20 - 100 )  + "px";
-            // currentContentsValues[3].querySelector(".subContent").style.marginTop = - (window.pageYOffset / 20 - 200 )+ "px";
-            let scroll = window.pageYOffset;
-
-            if (scroll <= 0) {
-                evcount = 0;
-                instanceCounts = 0;
-            }
-            if (scroll > currentOffset) {
-                scrollDirection = "down";
-                scrollEvents++;
-                marginTop ++
-            } else {
-                scrollDirection = "up";
-                scrollEvents--;
-                marginTop--
-            }
-            if (instanceCounts <= sizeupelems.length && window.pageYOffset < 6000) {
-
-                currentOffset = window.pageYOffset;
-                container.style.position = "fixed"
-                container.style.top = 0;
-                container.style.left = 0;
-
-                intoContainer.style.top = - window.pageYOffset / 5 + "px"
-                
-                    console.log(currentOffset)
-                //first frame
-                if (currentOffset >= 80 && currentOffset <= 200) {
-                   
-                    
-                    instanceCounts = 0;
-                }
-
-                //second frame
-                if (currentOffset >= 199 && currentOffset <= 1999) {
-                
-                    instanceCounts = 1;
-                }
-                //third frame
-                if (currentOffset >= 2000 && currentOffset <= 4000) {
-              
-                    instanceCounts = 2;
-                }
-
-                //last frame
-                if (currentOffset >= 4001) {
-                  
-                    instanceCounts = 3;
-                    container.style.position = "absolute"
-                    container.style.top = window.pageYOffset + "px";
-                    currentContentsValues[3].style.position = "absolute"
-
-                }
-
-            
-
-                sizeup()
-            }
-          
-        })
-
-
-        //rotation
-
- 
-    var oldX = 0;
-    var oldY = 0;
-    var c = 0;
-    var v = 1
-    let deg = 0;
-    let direction = 0;
-    let middle = 0;
-    let updown = "";
-    let leftright = "";
-    let pos = "";
-    let rot = "";
-
-
-        let img = document.getElementsByClassName("bacgimg")[0];
-   
-
-
-        // document.addEventListener("mouseleave", ()=>{
-        // img.style.transform = `rotate3d(1, 1, 0, -20deg)`
-     
-        
-        // })
-
-        document.addEventListener("mousemove", (event)=>{
-     
-        var x = (Math.floor(event.clientX / 30 )); 
-        var cWidth = window.innerWidth / 60    
-        var y = (Math.floor(event.clientY / 20)); 
-        var cHeight = window.innerHeight / 30      
-
-        if( (oldY <= event.pageY  || oldY >= event.pageY) && (oldX == event.pageX) ){
-           
-            direction = 1;
-            console.log("UD")
-
-        } if((oldX <= event.pageX || oldX >= event.pageX ) && (oldY == event.pageY) ) {
-           direction = 0;
-    
-           console.log("LR")
-        }
-
-     oldX = event.offsetX;
-        oldY = event.pageY;
-
-        if(direction == 1){
-            middle = Math.floor(cHeight/2);
-            deg = y;
-
-        } else {
-            middle = Math.floor(cWidth/2);
-            deg = x;
-        }
-
-        if(deg < middle){
-
-            c = middle - deg;   
-            deg = middle + c;
-            updown ="+";
-    
-        } else {
-            updown ="-";
-        }
-    
-        rot = `rotate3d(${v}, ${updown}${v}, 0, ${deg - 10}deg)`;
-        // console.log( event.offsetX)
-
-       //  img.style.transform = rot;
-       
-
-    })
-
-
-//animate h1
-
-
-    </script>
 
 
 
 
-
-
-
-<div id="mobile">
-
-    
-
-
-</div>
-
-</div>
 
 </body>
 
