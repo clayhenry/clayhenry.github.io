@@ -1,0 +1,201 @@
+<!<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body style="overflow-x: hidden">
+
+    <style>
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: width 0.3s, height 0.3s;
+        }
+
+        #container {
+
+            width:100%; 
+            height:100%;
+            position: fixed;
+
+       
+        }
+
+        .contents {
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .content {
+
+            width: 100%;
+            text-align: left;
+            background-color: aquamarine;
+            justify-content: normal;
+            position: absolute;
+        
+        }
+
+        .content.second{
+
+                color: white;
+     
+        }
+
+
+
+        @keyframes example {
+            from {background: red;}
+            to {background: yellow;}
+        }
+
+        /* The element to apply the animation to */
+        .animate1 {
+            background-color: red;
+            animation-name: example;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            position: fixed
+        }
+
+
+        #img {
+
+            
+            transform-origin: center center 0px; 
+            transition: all 0.2s ease 0s;
+
+        }
+
+
+
+    </style>
+
+
+
+
+<div id="cont" style="background-color: aqua; width:150px" >
+    <div id="img"><img src="image.jpg"  style="width:150px" >   </div> 
+
+</div>
+
+
+
+
+
+
+    <div style="height:8000px">
+        <br><br><br>
+    </div>
+
+    <script>
+
+    
+    let img = document.getElementById("img");
+    let cont = document.getElementById("cont");
+
+    let neg ="+";
+    
+   
+    let deg = 0;
+  
+    var oldX = 0;
+    var oldY = 0;
+
+
+// document.addEventListener("mouseleave", (event)=>{
+//     img.style.transform = `rotate3d(0, 0, 0, 0deg)`;
+
+// })
+
+    document.addEventListener("mousemove", (event)=>{
+        
+     
+        var x = (Math.floor(event.clientX / 30 ));     // Get the horizontal coordinate
+        var y = (Math.floor(event.clientY / 20));   // Get the vertical coordinate
+
+            console.log(event.clientX )
+    
+        if(event.offsetX > 400 &&  event.offsetX > 500){
+            deg++ 
+             
+        } else {
+
+            deg--;
+           
+        }
+
+          
+      
+
+        if((cont.clientWidth / 2) >  event.offsetX){
+            neg = "-";
+
+        
+        
+        } else {
+            neg = "";
+           // deg++;
+        }
+
+       if(deg >= 60 && deg >=70){
+
+            deg = 60
+        }
+
+        if(deg >= -60 && deg <= -70){
+
+            deg = -60
+        }
+     
+
+            if(oldX < event.offsetX) {
+                
+                deg++
+            } else {
+                 deg--
+            }
+
+
+      
+
+        if(oldY < event.pageY){
+
+           // console.log("down")
+        } else {
+
+          //  console.log("up")
+        }
+
+        oldX = event.offsetX;
+        oldY = event.pageY;
+     
+        let rot = `rotate3d(0.${y}, -0.${x}, 0, ${x}deg)`;
+        // console.log( event.offsetX)
+
+        img.style.transform = rot;
+        var coor = "X coords: " + x + ", Y coords: " + y;
+ 
+
+    })
+
+                    
+
+        
+
+
+
+    </script>
+
+</body>
+
+</html>

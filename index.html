@@ -1,102 +1,814 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Pawel Urbanski: Web Application Developer</title>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,700,900|Roboto" rel="stylesheet">
 
-  </head>
-  <body onScroll="scrollAction()">
-    <section class="page-header">
-      <div class="header-elements">
+</head>
 
-            <h1 class="project-name"> Pawel <br>Urbanski
-                <span class="project-tagline-secondary" ></span>
-              </h1>
-      <h2 class="project-tagline">A modern take on web development, user experience, design and technology.
-<br>
-      </h2>
-  <div class="circle-image"></div>
+<body style="overflow-x: hidden">
 
-      </div>
+    <style>
 
 
 
 
-    </section>
 
-    <div class="top-header">
-      <div class="top-info">
-        <h1>Pawel Urbanski</h1>
-        <h2>Web Application Developer</h2>
-      </div>
+   .animateImage {
+        transition: all 1s ease 0s;
+        width:400px;
+        
+        }
 
-<div class="external">
-<ul>
 
-  <li> <a href="https://www.linkedin.com/in/urbanskipawel"><img src="images/LinkedIn_logo.png" alt="Linkedin" /></a> </li>
-  <!-- <li> <a href="https://www.youtube.com/channel/UCIMN3USd44OYhQ1YWuaz0lA"><img src="images/YouTube.png" alt="Youtube" /></a> </li> -->
-    <li> <a href="https://github.com/clayhenry"><img src="images/github.png" alt="github" /></a> </li>
-  <li> <a href="https://www.behance.net/pawelurbanski"><img src="images/Behance.png" alt="Behance" /></a> </li>
-</ul>
-</div>
+    .textblk {
 
+        float: left; width:100%
+    }    
+
+           #intro1 {
+        margin:15%;
+        max-width: 900px;
+        min-width: 300px;
+        position: relative;
+        }
+
+     .subContent {
+
+        transition: all 0.8s;
+        padding: 15px; color: white; position: relative; z-index: 9
+    }
+
+
+        h1 {
+            font-family: 'Barlow', sans-serif;
+            font-weight: bold;
+            font-size: 35px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;    
+        }
+
+        .sizemeup {
+            transition: width 0.4s, height 0.4s;
+            position: absolute;
+            bottom: 0;
+            /* overflow: hidden; */
+        }
+        
+        #container {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            position: fixed;
+        }
+        
+        #cont {
+            position: absolute;
+            top: 6780px;
+        }
+        
+        .contents {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            /* height: 85%; */
+            overflow: hidden;
+        }
+        
+        .content {
+            width: 100%;
+            text-align: left;
+            background-color: aquamarine;
+            justify-content: normal;
+            position: absolute;
+        }
+        
+        .content.second {
+            color: white;
+        }
+        
+
+        /* The element to apply the animation to */
+        
+        .animate1 {
+            background-color: red;
+            animation-name: example;
+            animation-duration: 1s;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        .bacgimg {
+        height: 550px;
+        transform-origin: center center 0px;
+        transition: all 0.2s ease 0s;
+        /* margin-top: 10%;
+        width: 90%;
+        padding:0 5% */
+        /* border-top: 5px solid white; */
+        /* border-bottom: 5px solid white; */
+        /* background-color: white; */
+    }
+
+
+    .logo {
+        position:fixed;
+        z-index: 999;
+    }
+
+    hr {
+
+        height:1px;border-width:0;background-color:lightgrey
+    }
+    
+    
+    
+    @keyframes intotext {
+            from { top: 45px; }
+            to {  top: 0px;}
+        }
+
+    @keyframes intotext2 {
+            from { top: -48px; }
+            to {  top: 0px;}
+        }
+
+
+    @keyframes intopargraph {
+            from {transform: rotate3d(1, -1, 0, 30deg); opacity: 0 }
+            to {  transform: rotate3d(0, 0, 0, 0deg); opacity: 1  }
+        }
+
+
+    .h1-intro2 {
+        clip-path: inset(0% 0 0 0);
+        background-color:white;
+        position: relative;
+    }
+
+    .h1-intro1 h1 {
+       
+         position: relative;
+         animation-name: intotext;
+         animation-duration: 0.5s;
+         font-size: 50px;
+         background: linear-gradient(135deg, #1e2a96 0%,#a1d372 99%);
+         -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+         background-clip: text;
+
+            }
+    .h1-intro2 h1 {
+        top: -48px;
+        position: relative;
+        animation-name: intotext2;
+        animation-duration: 0.5s;
+        animation-delay: 0.2s;
+        animation-fill-mode: forwards;
+        font-size: 50px;
+
+          background: linear-gradient(135deg, #1e2a96 0%,#a1d372 60%);
+         -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+         background-clip: text;
+  }
+
+  #hp-intro1 {
+      transform: rotate3d(1, -1, 0, 30deg);
+      opacity: 0;
+      animation-name: intopargraph;
+      animation-duration: 0.5s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+  }
+
+  #hp-intro1 img {
+      float: left;
+      border-radius: 100%;
+      width:150px;
+      margin-right: 20px;
+  }
+
+  
+  .outro {
+
+        position: relative; 
+        margin: 5% 15%;
+        max-width: 900px;
+        min-width: 400px;
+    }
+
+
+
+@media screen and (min-width:300px) {
+    .animateImage {
+        transition: all 1s ease 0s;
+        width: 100%
+    }
+
+     .subContent {
+
+        transition: all 0.8s;
+        padding: 25px; color: white; position: relative; z-index: 9
+    }
+
+
+      .outro {
+
+                position: relative; 
+                margin: 5%;
+                max-width: 900px;
+                min-width: 400px;
+                }
+
+
+     
+    .h1-intro1 h1 {
+       
+       position: relative;
+       animation-name: intotext;
+       animation-duration: 0.5s;
+       font-size: 40px;
+       background: linear-gradient(135deg, #1e2a96 0%,#a1d372 99%);
+       -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+       background-clip: text;
+
+          }
+  .h1-intro2 h1 {
+      top: -48px;
+      position: relative;
+      animation-name: intotext2;
+      animation-duration: 0.5s;
+      animation-delay: 0.2s;
+      animation-fill-mode: forwards;
+      font-size: 40px;
+
+        background: linear-gradient(135deg, #1e2a96 0%,#a1d372 60%);
+       -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+       background-clip: text;
+}           
+
+}
+
+
+
+
+@media screen and (min-width:800px) {
+    .animateImage {
+        transition: all 1s ease 0s;
+        width: 550px;
+    }
+
+    
+    .textblk{
+        width:30%;
+    }
+
+     .subContent {
+
+        transition: all 0.8s;
+        padding: 25px; color: white; position: relative; z-index: 9
+        }
+
+
+
+}
+
+@media screen and (min-width:1160px) {
+
+    .animateImage {
+        transition: all 1s ease 0s;
+        width: 650px;
+    }
+
+            .textblk{
+        width:40%;
+    }
+
+    
+    .outro {
+
+                    position: relative; 
+                    margin: 5% 15%;
+                    max-width: 900px;
+                    min-width: 400px;
+                    }
+
+
+ 
+ .h1-intro1 h1 {
+       
+       position: relative;
+       animation-name: intotext;
+       animation-duration: 0.5s;
+       font-size: 50px;
+       background: linear-gradient(135deg, #1e2a96 0%,#a1d372 99%);
+       -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+       background-clip: text;
+
+          }
+  .h1-intro2 h1 {
+      top: -48px;
+      position: relative;
+      animation-name: intotext2;
+      animation-duration: 0.5s;
+      animation-delay: 0.2s;
+      animation-fill-mode: forwards;
+      font-size: 50px;
+
+        background: linear-gradient(135deg, #1e2a96 0%,#a1d372 60%);
+       -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+       background-clip: text;
+}                   
+
+}
+
+
+@media screen and (min-width:1400px) {
+    .animateImage {
+        transition: all 1s ease 0s;
+        width: 700px;
+    }
+
+        .textblk{
+        width:40%;
+    }
+         .subContent {
+
+            transition: all 0.8s;
+            padding:30px 65px 0 0; color: white; 
+            position: relative; 
+            z-index: 9;
+            margin-left: 10%;
+            }
+
+
+                .outro {
+
+position: relative; 
+margin: 5% 15%;
+max-width: 900px;
+min-width: 400px;
+}
+}
+
+ 
+
+    </style>
+ <!-- <div class="logo">Logo</div> -->
+    <div id="container">
+       
+        <div id="default" class="sizemeup" style="background: white; width:100%; height: 0px; overflow: visible">
+            <div class="contents">
+                <div id="intro1">
+                    <div class="h1-intro1"><h1>Hi, I'm Pawel Urbanski. </h1></div>
+                    <div class="h1-intro2"><h1>I develop awesome digital products.</h1></div>
+
+                    <div id="hp-intro1">
+                        <img src="pawelurbanski.jpg" >
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="sizemeup" style="background:linear-gradient(45deg, #da655f 43%,#ff70c3 100%); width:100%; height: 80px; bottom: 0;  overflow:hidden;">
+                <div class="contents into" style="position: relative;">
+
+                    <div class="subContent"> 
+
+                        <div class="bacgimg" style="margin-top: 60px;">
+                            
+                                <div style="float: left"> 
+                                        <img src="bacg1.png" class="animateImage" >
+                                    </div>
+                            
+                            <div class="textblk" >
+                                <h1 style="color: white" >Sed do eiusmod tempor incididunt ut labore et dolore </h1>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. A galley of type and scrambled it to make a type specimen book.</p>
+                                <!-- <span onclick="readMore(1)" >Read More</span> -->
+                                
+                            </div>
+                 
+                        </div>
+                        <!-- <div class="more" style="float: right;">Some More info here </div> -->
+                    </div>
+                </div>
+
+                <div class="sizemeup" style="background: linear-gradient(45deg, #da9d5f 44%,#e5e164 100%); width:100%; height: 0px; z-index: 9;">
+                    <div class="contents"  style="position: relative; ">
+                        <div class="subContent"> 
+
+                            <div class="bacgimg">
+                                
+                                    <div style="float: left"> 
+                                            <img src="bacg2.png" class="animateImage" >
+                                        </div>
+                                
+                                <div class="textblk">
+                                    <h1 style="color: white;" >Sed do eiusmod tempor incididunt ut labore et dolore </h1>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. A galley of type and scrambled it to make a type specimen book.</p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <div id="three" class="sizemeup" style="background:  linear-gradient(45deg, #5fc3da 44%,#68edaf 100%); width:100%; height: 0px; z-index: 9;">
+                        <div class="contents" style="position: relative">
+                            <div class="subContent"> 
+
+                                <div class="bacgimg">
+                                    <div class="more"></div>
+                                    
+                                    <div style="float: left">
+                                            <img src="bacg3.png" class="animateImage">
+                                    </div>
+                                    <div class="textblk">
+                                        <h1 style="color: black;" >Sed do eiusmod tempor incididunt ut labore et dolore </h1>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. A galley of type and scrambled it to make a type specimen book.</p>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                         
+                        </div>
+                    </div>
+
+
+                 
+                </div>
+                 
+            </div>
+
+
+            <div id="four" class="sizemeup" style="background: white; width:100%; height: 0px; z-index: 9; ">
+                    <div class="outro">
+                        <div class="subContent"> 
+
+                            <div class="bacgimg">
+                            
+                         
+                                    <div class="h1-intro1"><h1 style="font-size:35px;">Sed do eiusmod tempor incididunt ut labore et dolore </h1></div>
+                                    <div style="color: black;">
+                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. A galley of type and scrambled it to make a type specimen book.</p>
+                                     
+                                     <div style="width:100%; text-align:center">
+                                        <img src="stack_logos.jpg"><br><hr >
+                                        <img src="cloud_logos.jpg"><br><hr>
+                                    </div>
+                                </div>
+                              
+                               <!-- Note :
+   - You can modify the font style and form style to suit your website. 
+   - Code lines with comments ���Do not remove this code���  are required for the form to work properly, make sure that you do not remove these lines of code. 
+   - The Mandatory check script can modified as to suit your business needs. 
+   - It is important that you test the modified form before going live.-->
+<div id='crmWebToEntityForm' style='width:600px;margin:auto;'>
+        <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
+        <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads3707658000000191666 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory3707658000000191666()' accept-charset='UTF-8'>
+     
+          <!-- Do not remove this code. -->
+         <input type='text' style='display:none;' name='xnQsjsdp' value='2edccca93963a164a676318a7333479c779bc3f8638655f060668722018a6166'/>
+         <input type='hidden' name='zc_gad' id='zc_gad' value=''/>
+         <input type='text' style='display:none;' name='xmIwtLD' value='152f4541c6ebe49af89e92e3564800078ff1f63643a856194140281346ac8da6'/>
+         <input type='text' style='display:none;'  name='actionType' value='TGVhZHM='/>
+     
+         <input type='text' style='display:none;' name='returnURL' value='http&#x3a;&#x2f;&#x2f;rightatleft.com&#x2f;' /> 
+          <!-- Do not remove this code. -->
+         <style>
+             tr , td { 
+                 padding:6px;
+                 border-spacing:0px;
+                 border-width:0px;
+                 }
+         </style>
+         <table style='background-color:white;color:black;'>
+     
+         <tr><td colspan='2' style='text-align:left;color:black;font-family:Arial;font-size:14px;'><strong>Let's Get Started</strong></td></tr>
+     
+         <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;'>Company<span style='color:red;'>*</span></td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='100' name='Company' /></td></tr>
+     
+         <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;'>Email<span style='color:red;'>*</span></td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='100' name='Email' /></td></tr>
+     
+         <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;'>Phone</td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='30' name='Phone' /></td></tr>
+     
+         <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;'>First Name<span style='color:red;'>*</span></td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='40' name='First Name' /></td></tr>
+     
+         <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;'>Last Name<span style='color:red;'>*</span></td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='80' name='Last Name' /></td></tr>
+     
+         <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;'>Project Description </td><td> <textarea name='Description' maxlength='32000' style='width:250px;'>&nbsp;</textarea></td></tr>
+     
+         <tr><td colspan='2' style='text-align:center; padding-top:15px;font-size:12px;'>
+             <input style='font-size:12px;color:black'  type='submit' value='Submit' />
+             <input  type='reset' style='font-size:12px;color:black' value='Reset' />
+             </td>
+         </tr>
+        </table>
+         <script>
+            var mndFileds=new Array('Company','First Name','Last Name','Email');
+            var fldLangVal=new Array('Company','First Name','Last Name','Email');
+             var name='';
+             var email='';
+     
+            function checkMandatory3707658000000191666() {
+             for(i=0;i<mndFileds.length;i++) {
+               var fieldObj=document.forms['WebToLeads3707658000000191666'][mndFileds[i]];
+               if(fieldObj) {
+                 if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
+                  if(fieldObj.type =='file')
+                     { 
+                      alert('Please select a file to upload.'); 
+                      fieldObj.focus(); 
+                      return false;
+                     } 
+                 alert(fldLangVal[i] +' cannot be empty.'); 
+                           fieldObj.focus();
+                           return false;
+                 }  else if(fieldObj.nodeName=='SELECT') {
+                          if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
+                     alert(fldLangVal[i] +' cannot be none.'); 
+                     fieldObj.focus();
+                     return false;
+                    }
+                 } else if(fieldObj.type =='checkbox'){
+                     if(fieldObj.checked == false){
+                     alert('Please accept  '+fldLangVal[i]);
+                     fieldObj.focus();
+                     return false;
+                    } 
+                  } 
+                  try {
+                      if(fieldObj.name == 'Last Name') {
+                     name = fieldObj.value;
+                        }
+                 } catch (e) {}
+                 }
+             }
+              }
+            
+     </script>
+         </form>
+     </div>
+                            </div>
+
+
+                            
+                        </div>
+                     
+                    </div>
+                </div>
+        
+        </div>
+       
     </div>
 
-    <section>
-      <div class="second-row">
-
-      </div>
-    </section>
-
-    <section class="main-content">
 
 
 
 
+    <div style="height:7000px">
+                      
+    </div>
 
-<h3>The Developer</h3>
-<p>
-I can tell you that I've been involved professionally in <code>web development</code> for over 10 years, but technology and ideas change so rapidly  -- What’s  been popular 10 years ago has little significance today. My philosophy is simple: develop software for end-users, utilize modern technology, build on experience and don't let the past dictate the future. But, I'm getting ahead of myself...
-</p>
 
-<h3>The Technology</h3>
-<p>
-  ... there is a difference between what's in vogue and what's practical. Technology is subjective. As a developer, my goal is to be stack-agnostic as much as possible.
-  I've developed on <code>ASP.NET C#</code> stack, <code>PHP</code> and <code>Laravel</code>, <code>MySQL</code>, <code>MSSQL</code>, <code>Mongodb</code> as well <code>Javascript</code>.
-  Indeed, let's not forget the essentials <code>HTML5</code> and <code>CSS3</code>.
-</p>
-<hr>
-<div class="technology">
-  <ul>
-    <li class="logos" ><img src="images/javascript.png" alt="Javascript" /></li>
-    <li class="logos" ><img src="images/angular.png" alt="AngularJs" /></li>
-    <li class="logos" ><img src="images/node_icon2.png" alt="NodeJs" /></li>
-    <li class="logos" ><img src="images/laravel.png" alt="Laravel" /></li>
-    <li class="logos" ><img src="images/css.png" alt="css" /></li>
-    <li class="logos" ><img src="images/HTML5_logo.png" alt="HTML5" /></li>
-    <li class="logos" ><img src="images/nginx.png" alt="nginx" /></li>
-  </ul>
 
-</div>
-<hr>
+<script>
+        //always start from top
+        setTimeout(function() {
+            window.scrollTo(0, 0)
+        }, 200)
 
-<h3>The Designer</h3>
-<p>You can take the best technology and development techniques, but without a great user experience, the app will serve little value. Designing a great <code>UX</code> plays a pivotal part in my everyday process. It’s not just creating a great looking UI -- it’s about using data points, interviews, prototypes and personas. By understanding the user is where we create value and an awesome web application.</p>
+        let sizeupelems = document.querySelectorAll(".sizemeup");
+        let container = document.getElementById("container");
+        let currentContentsValues = document.querySelectorAll(".contents")
+    
+        let contunueContent = document.querySelector("#cont");
+        let logo = document.querySelector("#cont");
+        let intoContainer = document.getElementById("intro1");
+        let scrollDirection = ""
+        let scrollEvents = 0;
+        let instanceCounts = 0
+        let currentOffset = window.pageYOffset;
+        let marginTop = 0;
+   
+        readMore = (index) =>{
+            currentContentsValues[1].querySelector(".bacgimg").style.marginTop=  "-500px"             
+        }
+        sizeup = () => {
 
-<hr>
-<h3>Questions? </h3>
-<p>
-  Send me an <a href="mailto:pawel@clusterone.ca">email.</a> or, have a look at few <a href="https://www.behance.net/pawelurbanski" target="_blank">selected projects</a>
-</p>
+            let h = sizeupelems[instanceCounts].clientHeight
+            let w = sizeupelems[instanceCounts].clientWidth
 
-    </section>
+            let contentCont = sizeupelems[instanceCounts].querySelector(".contents");
+          
 
-    <script type="text/javascript" src="javascript.js" ></script>
-  </body>
+            if (scrollDirection == "down") {
+                sizeupelems[instanceCounts].style.height = (window.innerHeight) + "px";
+                if (typeof sizeupelems[instanceCounts + 1] != "undefined") {
+                    sizeupelems[instanceCounts + 1].style.height = (80) + "px";
+            
+                }
+                for(i = 1; i<= 3; i++ ){
+                      if(instanceCounts == i){
+                        currentContentsValues[i].querySelector(".animateImage").style.marginTop = "-40px";
+                    } 
+                }
+            }
+          
+            if (scrollDirection == "up") {
+           
+
+                let downIndex = instanceCounts + 1;
+
+                    for(i = 1; i<= 3; i++ ){
+                      if(instanceCounts == i){
+                        currentContentsValues[i].querySelector(".animateImage").style.marginTop = "0px";
+                    } 
+                }
+            
+                if (typeof(sizeupelems[downIndex]) != "undefined") {
+                    sizeupelems[downIndex].style.height = "80px";
+                    
+                    if (typeof sizeupelems[downIndex + 1] != "undefined") {
+                        sizeupelems[downIndex + 1].style.height = "0px"
+                    
+                        
+                    };
+                }
+            }
+        }
+
+        
+        //sizeup();
+
+        document.addEventListener("scroll", (e) => {
+     
+            currentContentsValues[1].querySelector(".bacgimg").style.marginTop = - (window.pageYOffset / 20) + 150  + "px";
+            currentContentsValues[2].querySelector(".bacgimg").style.marginTop = - (window.pageYOffset / 20) + 270  + "px";
+            currentContentsValues[3].querySelector(".bacgimg").style.marginTop = - (window.pageYOffset / 20) + 310  + "px";
+          
+            // currentContentsValues[1].querySelector(".subContent").style.marginTop = - window.pageYOffset / 20 + "px";
+            // currentContentsValues[2].querySelector(".subContent").style.marginTop = - (window.pageYOffset / 20 - 100 )  + "px";
+            // currentContentsValues[3].querySelector(".subContent").style.marginTop = - (window.pageYOffset / 20 - 200 )+ "px";
+            let scroll = window.pageYOffset;
+
+            if (scroll <= 0) {
+                evcount = 0;
+                instanceCounts = 0;
+            }
+            if (scroll > currentOffset) {
+                scrollDirection = "down";
+                scrollEvents++;
+                marginTop ++
+            } else {
+                scrollDirection = "up";
+                scrollEvents--;
+                marginTop--
+            }
+            if (instanceCounts <= sizeupelems.length && window.pageYOffset < 6000) {
+
+                currentOffset = window.pageYOffset;
+                container.style.position = "fixed"
+                container.style.top = 0;
+                container.style.left = 0;
+
+                intoContainer.style.top = - window.pageYOffset / 5 + "px"
+                
+                    console.log(currentOffset)
+                //first frame
+                if (currentOffset >= 80 && currentOffset <= 200) {
+                   
+                    
+                    instanceCounts = 0;
+                }
+
+                //second frame
+                if (currentOffset >= 199 && currentOffset <= 1999) {
+                
+                    instanceCounts = 1;
+                }
+                //third frame
+                if (currentOffset >= 2000 && currentOffset <= 4000) {
+              
+                    instanceCounts = 2;
+                }
+
+                //last frame
+                if (currentOffset >= 4001) {
+                  
+                    instanceCounts = 3;
+                    container.style.position = "absolute"
+                    container.style.top = window.pageYOffset + "px";
+                    currentContentsValues[3].style.position = "absolute"
+
+                }
+
+            
+
+                sizeup()
+            }
+          
+        })
+
+
+        //rotation
+
+ 
+    var oldX = 0;
+    var oldY = 0;
+    var c = 0;
+    var v = 1
+    let deg = 0;
+    let direction = 0;
+    let middle = 0;
+    let updown = "";
+    let leftright = "";
+    let pos = "";
+    let rot = "";
+
+
+        let img = document.getElementsByClassName("bacgimg")[0];
+   
+
+
+        // document.addEventListener("mouseleave", ()=>{
+        // img.style.transform = `rotate3d(1, 1, 0, -20deg)`
+     
+        
+        // })
+
+        document.addEventListener("mousemove", (event)=>{
+     
+        var x = (Math.floor(event.clientX / 30 )); 
+        var cWidth = window.innerWidth / 60    
+        var y = (Math.floor(event.clientY / 20)); 
+        var cHeight = window.innerHeight / 30      
+
+        if( (oldY <= event.pageY  || oldY >= event.pageY) && (oldX == event.pageX) ){
+           
+            direction = 1;
+            console.log("UD")
+
+        } if((oldX <= event.pageX || oldX >= event.pageX ) && (oldY == event.pageY) ) {
+           direction = 0;
+    
+           console.log("LR")
+        }
+
+     oldX = event.offsetX;
+        oldY = event.pageY;
+
+        if(direction == 1){
+            middle = Math.floor(cHeight/2);
+            deg = y;
+
+        } else {
+            middle = Math.floor(cWidth/2);
+            deg = x;
+        }
+
+        if(deg < middle){
+
+            c = middle - deg;   
+            deg = middle + c;
+            updown ="+";
+    
+        } else {
+            updown ="-";
+        }
+    
+        rot = `rotate3d(${v}, ${updown}${v}, 0, ${deg - 10}deg)`;
+        // console.log( event.offsetX)
+
+       //  img.style.transform = rot;
+       
+
+    })
+
+
+//animate h1
+
+
+    </script>
+
+
+
+</body>
+
 </html>
