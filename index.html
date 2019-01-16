@@ -10,27 +10,6 @@
 
 </head>
 
-<script>
-
-if((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)){
-
-
-var req = new XMLHttpRequest();
-
-req.onload = function() {
-    document.getElementById('loadmobileHere').innerHTML = this.responseText;
-}
-
-req.open("get", "index_mobile.html", true);
-req.send();
-
-
-}
-
-
-</script>
-
-
 
 <body id="loadmobileHere">
 
@@ -629,6 +608,23 @@ min-width: 400px;
 
 
     //scroll Event
+
+
+if((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)){
+
+
+var req = new XMLHttpRequest();
+
+req.onload = function() {
+    document.getElementById('loadmobileHere').innerHTML = this.responseText;
+}
+
+req.open("get", "index_mobile.html", true);
+req.send();
+
+
+}
+
 
 
      function scrollToSignup(){
