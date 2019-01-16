@@ -15,11 +15,26 @@
 
     <style>
 
+        html {
 
+            font-family: 'Barlow', sans-serif;
+            color: black
+        }
         .form {
 
             color:black;
             font-family: 'Roboto', sans-serif;  
+        }
+
+        .getStarted {
+            padding: 10px;
+            background: cornflowerblue;
+            text-align: center;
+            border-radius: 10px;
+            width: 60%;
+            color: white;
+            cursor: pointer;
+            font-weight: bold
         }
 
 
@@ -430,7 +445,7 @@ min-width: 400px;
                                 <div class="textblk">
                                     <h1 style="color: white;" >Sed do eiusmod tempor incididunt ut labore et dolore </h1>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. A galley of type and scrambled it to make a type specimen book.</p>
-                                    <div class="getStarted"><a href="">Get Started</a></div>
+                                    <div class="getStarted" onclick="scrollToSignup()">Get Started</div>
                                 </div>
                                
                             </div>
@@ -451,7 +466,7 @@ min-width: 400px;
                                     <div class="textblk">
                                         <h1 style="color: black;" >Sed do eiusmod tempor incididunt ut labore et dolore </h1>
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. A galley of type and scrambled it to make a type specimen book.</p>
-                                          <div class="getStarted"><a href="">Get Started</a></div>
+                                        <div class="getStarted" onclick="scrollToSignup()">Get Started</div>
                                     </div>
                                    
                                 </div>
@@ -483,12 +498,17 @@ min-width: 400px;
                                         <img src="cloud_logos.jpg"><br><hr>
                                     </div>
                                 </div>
-                              <div id="modal"></div>
+                              <div id="modal">
+                                    <div id="killmodal" onclick="killmodalButton()" style="display:none">X</div>
+                                    <div id="modalcontent"></div>
+
+                              </div>
    
    <div class="form" id="formSignup">
    
                                 <div style='margin:auto; width:45%; float:left'>
-    d;kfd;lsk;ldsk;flds
+                                        <h2><strong>Let's Get Started</strong></h2>
+                                        <p>dhnkjdfhfkj kjdshfkj dshfkj dhsdkjsh fkjdshfkjshdkjh dkjshfdkjsh fkjsdhfkjh skjdhfkjhkj</p>
    </div>
 
 
@@ -514,7 +534,7 @@ min-width: 400px;
          </style>
          <table style='background-color:white;color:black;'>
      
-         <tr><td colspan='2' style='text-align:left;color:black;font-family:Arial;font-size:14px;'><strong>Let's Get Started</strong></td></tr>
+    
      
          <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;'>Company<span style='color:red;'>*</span></td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='100' name='Company' /></td></tr>
      
@@ -529,11 +549,11 @@ min-width: 400px;
          <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;'>Project Description </td><td> <textarea name='Description' maxlength='32000' style='width:250px;'>&nbsp;</textarea></td></tr>
      
          <tr><td colspan='2' style='text-align:center; padding-top:15px;font-size:12px;'>
-             <input style='font-size:12px;color:black'  type='submit' value='Submit' />
-             <input  type='reset' style='font-size:12px;color:black' value='Reset' />
+             <input class="getStarted"  type='submit' value='Submit' />
+          
              </td>
          </tr>
-        </table>
+        </table><br /><br />
          <script>
             var mndFileds=new Array('Company','First Name','Last Name','Email');
             var fldLangVal=new Array('Company','First Name','Last Name','Email');
@@ -626,16 +646,23 @@ req.send();
 }
 
 
+        var elmnt = document.getElementById("formSignup").innerHTML;
+        var modal = document.getElementById("modal");
+        var killmodal =  document.getElementById("killmodal");
+        var modalContent = document.getElementById("modalcontent");
 
      function scrollToSignup(){
 
-        var elmnt = document.getElementById("formSignup").innerHTML;
-        var modal = document.getElementById("modal");
-        modal.innerHTML = elmnt;
-        modal.setAttribute("style", "position:fixed; top:0; background-color: rgba(232, 232, 232, 0.8);left: 0;height: 100%; width:100%")
+        modalContent.innerHTML = elmnt;
+
+        modal.setAttribute("style", "position:fixed; top:10%; background-color:white ;height: 50%; width:50%; border: 10px solid #d8d1d1; color:black;    padding: 109px;")
+        killmodal.setAttribute("style", "position: absolute;top: 0; color: black;right: 0;padding: 10px;border: 1px solid gray;margin: 10px")
     }
 
+  function killmodalButton(){
+    modal.setAttribute("style", "display:none")
 
+  }
 
         //always start from top
         setTimeout(function() {
