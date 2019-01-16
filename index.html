@@ -428,6 +428,7 @@ min-width: 400px;
                             <div class="textblk" >
                                 <h1 style="color: white" >Sed do eiusmod tempor incididunt ut labore et dolore </h1>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. A galley of type and scrambled it to make a type specimen book.</p>
+                                <div class="getStarted" onclick="scrollToSignup()">Get Started</div>
                                 <!-- <span onclick="readMore(1)" >Read More</span> -->
                                 
                             </div>
@@ -450,6 +451,7 @@ min-width: 400px;
                                 <div class="textblk">
                                     <h1 style="color: white;" >Sed do eiusmod tempor incididunt ut labore et dolore </h1>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. A galley of type and scrambled it to make a type specimen book.</p>
+                                    <div class="getStarted"><a href="">Get Started</a></div>
                                 </div>
                                
                             </div>
@@ -470,6 +472,7 @@ min-width: 400px;
                                     <div class="textblk">
                                         <h1 style="color: black;" >Sed do eiusmod tempor incididunt ut labore et dolore </h1>
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. A galley of type and scrambled it to make a type specimen book.</p>
+                                          <div class="getStarted"><a href="">Get Started</a></div>
                                     </div>
                                    
                                 </div>
@@ -622,6 +625,21 @@ min-width: 400px;
 
 
 <script>
+
+
+
+    //scroll Event
+
+
+     function scrollToSignup(){
+
+        var elmnt = document.querySelector(".outro");
+        debugger
+        elmnt.scrollIntoView();
+    }
+
+
+
         //always start from top
         setTimeout(function() {
             window.scrollTo(0, 0)
