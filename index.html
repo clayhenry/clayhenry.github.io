@@ -639,20 +639,7 @@ min-width: 400px;
     //scroll Event
 
 
-if((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)){
 
-
-var req = new XMLHttpRequest();
-
-req.onload = function() {
-    document.getElementById('loadmobileHere').innerHTML = this.responseText;
-}
-
-req.open("get", "index_mobile.html", true);
-req.send();
-
-
-}
 
 
         var elmnt = document.getElementById("formSignup").innerHTML;
