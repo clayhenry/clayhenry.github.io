@@ -1,11 +1,30 @@
 
     <style>
 
+a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 2px 5px;
+    background-color: #5fc3da;
+    font-weight: bold;
+}
+
+
    .animateImage {
         transition: all 1s ease 0s;
         width:400px;
         
         }
+
+                .img {
+
+border: 0px;
+padding: 0;
+margin: 0;
+background-color: white;
+}
 
        .form {
 
@@ -582,10 +601,8 @@ min-width: 400px;
 
      function scrollToSignup(){
 
-        modalContent.innerHTML = elmnt;
-
-        modal.setAttribute("style", "position:fixed; top:10%; background-color:white ;height: 50%; width:80%; border: 10px solid #d8d1d1; color:black; padding: 20px;")
-        killmodal.setAttribute("style", "position: absolute;top: 0; color: black;right: 0;padding: 10px;border: 1px solid gray;margin: 10px")
+     var elmnt = document.getElementById("formSignup");
+elmnt.scrollIntoView();
     }
 
   function killmodalButton(){
