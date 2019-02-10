@@ -707,7 +707,9 @@ mobile = true;
                 }
                 for(i = 1; i<= 3; i++ ){
                       if(instanceCounts == i){
+                        if(!mobile){
                         currentContentsValues[i].querySelector(".animateImage").style.marginTop = "-40px";
+                        }
                     } 
                 }
             }
@@ -747,9 +749,7 @@ mobile = true;
             currentContentsValues[3].querySelector(".bacgimg").style.marginTop = - (window.pageYOffset / 20) + 360  + "px";
             currentContentsValues[4].querySelector(".bacgimg").style.marginTop = - (window.pageYOffset / 20) + 410  + "px";
            } 
-            // currentContentsValues[1].querySelector(".subContent").style.marginTop = - window.pageYOffset / 20 + "px";
-            // currentContentsValues[2].querySelector(".subContent").style.marginTop = - (window.pageYOffset / 20 - 100 )  + "px";
-            // currentContentsValues[3].querySelector(".subContent").style.marginTop = - (window.pageYOffset / 20 - 200 )+ "px";
+
             let scroll = window.pageYOffset;
 
             if (scroll <= 0) {
