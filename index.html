@@ -573,7 +573,7 @@ min-width: 400px;
                                         <br><hr><br>
                                     </div>
                                 </div>
-                              <div id="modal">
+                              <div id="modal" style="position:fixed; top:10%; background-color:white ;height: 50%; width:50%; border: 10px solid #d8d1d1; color:black;  padding: 109px; display: none">
                                     <div id="killmodal" onclick="killmodalButton()" style="display:none">X</div>
                                     <div id="modalcontent"></div>
 
@@ -581,7 +581,7 @@ min-width: 400px;
    
    <div class="form" id="formSignup">
    
-                                <div style='margin:auto; width:40%; float:left;     padding-right: 15px;
+                                <div style='margin:auto; width:40%; float:left; padding-right: 15px;
                                 font-size: 14px;'>
                                         <h2><strong>Next Step...</strong></h2>
                                         <p> Let's a have a quick conversation of how we can take your digital experiences to the next level. 
@@ -679,33 +679,23 @@ req.send();
 }
 
 
-     
-
-     function scrollToSignup(){
-
-                 var elmnt = document.getElementById("formSignup");
-                elmnt.scrollIntoView();
-                
-        } 
-    }
-
-
-        var elmnt = document.getElementById("formSignup").innerHTML;
+           var elmnt = document.getElementById("formSignup").innerHTML;
         var modal = document.getElementById("modal");
         var killmodal =  document.getElementById("killmodal");
         var modalContent = document.getElementById("modalcontent");
 
+    
+  
      function scrollToSignup(){
 
         modalContent.innerHTML = elmnt;
 
-        modal.setAttribute("style", "position:fixed; top:10%; background-color:white ;height: 50%; width:50%; border: 10px solid #d8d1d1; color:black;    padding: 109px;")
+        modal.style.display = "block"
         killmodal.setAttribute("style", "position: absolute;top: 0; color: black;right: 0;padding: 10px;border: 1px solid gray;margin: 10px")
     }
 
   function killmodalButton(){
-    modal.setAttribute("style", "display:none")
-
+    modal.style.display = "none"
   }
   
 
