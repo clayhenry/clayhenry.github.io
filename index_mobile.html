@@ -413,7 +413,7 @@ min-width: 400px;
                                 <p>Progressive Web Apps (PWA) are the best way of developing mobile, web and desktop apps. Build once, deploy everywhere.</p>
                                 <p><strong>Project Description:</strong>
                                     An <a href="https://www.behance.net/gallery/72438477/PWA-Elate-Communications-Portal" target="_blank">Employee Engagement Portal</a> Framework that features authentication, real-time chat, publishing and engagement. Build as PWA, can be accessed as a web, mobile or desktop app.</p>
-                                    <div class="getStarted" onclick="scrollToSignup()">Lets Get Started</div>
+                                    <div class="getStarted" onclick="scrollToSignupfff()">Lets Get Started</div>
                             
                                 <!-- <span onclick="readMore(1)" >Read More</span> -->
                                 
@@ -440,7 +440,7 @@ min-width: 400px;
                                                 <p><strong>Project Description:</strong>
                                                  <a href="https://elatehq.com/" target="_blank">Elate Application Management</a> was build as a Single-Page-Application that heavly focuses on both the applicant and the recruiters experiences.</p>
                                                  <p>The application features a smart job matching system, easy applicant tracking, as well as recommendation and team options.   </p>   
-                                                <div class="getStarted" onclick="scrollToSignup()">Lets Get Started</div>
+                                                <div class="getStarted" onclick="scrollToSignupfff()">Lets Get Started</div>
                                             </div>
                                
                             </div>
@@ -466,7 +466,7 @@ min-width: 400px;
                                                 <p><strong>Projects Overview:</strong>
                                                 Using Google Analytics to create a custom report for user interactions; from click to scroll events, heatmaps and recordings.</p>
                                             </p>
-                                            <div class="getStarted" onclick="scrollToSignup()">Lets Get Started</div>
+                                            <div class="getStarted" onclick="scrollToSignupfff()">Lets Get Started</div>
                                         </div>
                                    
                                 </div>
@@ -503,7 +503,7 @@ min-width: 400px;
                                         <br><hr><br>
                                     </div>
                                 </div>
-                                <div id="modal" style="position:fixed; top:10%; background-color:white;height: 50%; width:100%; border: 10px solid #d8d1d1; color:black;  padding: 19px;">
+                                <div id="modal" style="position:fixed; top:10%; background-color:white;height: 80%; width:95%; border: 10px solid #d8d1d1; left: 0; color:black;  padding: 19px; display: none;">
                                         <div id="killmodal" onclick="killmodalButton()" style="display:none">X</div>
                                         <div id="modalcontent"></div>
     
@@ -567,22 +567,22 @@ min-width: 400px;
 
 <script>
 
-var elmnt = document.getElementById("formSignup").innerHTML;
-        var modal = document.getElementById("modal");
-        var killmodal =  document.getElementById("killmodal");
-        var modalContent = document.getElementById("modalcontent");
+var elmntfff = document.getElementById("formSignup").innerHTML;
+        var modalfff = document.getElementById("modal");
+        var killmodalfff =  document.getElementById("killmodal");
+        var modalContentfff = document.getElementById("modalcontent");
 
     
   
-     function scrollToSignup(){
+     function scrollToSignupfff(){
 
-        modalContent.innerHTML = elmnt;
+        modalContentfff.innerHTML = elmntfff;
 
-        modal.style.display = "block"
-        killmodal.setAttribute("style", "position: absolute;top: 0; color: black;right: 0;padding: 10px;border: 1px solid gray;margin: 10px")
+        modalfff.style.display = "block"
+        killmodalfff.setAttribute("style", "position: absolute;top: 0; color: black;right: 0;padding: 10px;border: 1px solid gray;margin: 10px")
     }
 
-  function killmodalButton(){
+  function killmodalButtonfff(){
     modal.style.display = "none"
   }
   
