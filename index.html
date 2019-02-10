@@ -73,7 +73,8 @@
      .subContent {
 
         transition: all 0.8s;
-        padding: 15px; color: white; position: relative; z-index: 9
+        padding: 15px; color: white; position: relative; z-index: 9;
+        scroll-snap-align: start;
     }
 
 
@@ -131,6 +132,7 @@
             top: 0;
             /* height: 85%; */
             overflow: hidden;
+            scroll-snap-type: x mandatory;
         }
         
         .content {
@@ -744,7 +746,7 @@ mobile = true;
             currentContentsValues[2].querySelector(".bacgimg").style.marginTop = - (window.pageYOffset / 20) + 260  + "px";
             currentContentsValues[3].querySelector(".bacgimg").style.marginTop = - (window.pageYOffset / 20) + 360  + "px";
             currentContentsValues[4].querySelector(".bacgimg").style.marginTop = - (window.pageYOffset / 20) + 410  + "px";
-          
+           } 
             // currentContentsValues[1].querySelector(".subContent").style.marginTop = - window.pageYOffset / 20 + "px";
             // currentContentsValues[2].querySelector(".subContent").style.marginTop = - (window.pageYOffset / 20 - 100 )  + "px";
             // currentContentsValues[3].querySelector(".subContent").style.marginTop = - (window.pageYOffset / 20 - 200 )+ "px";
@@ -813,7 +815,7 @@ mobile = true;
 
                 sizeup()
             }
-        }
+       
         })
 
 
