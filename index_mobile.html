@@ -565,7 +565,28 @@ min-width: 400px;
     </div>
                             </div>
 
+<script>
 
+var elmnt = document.getElementById("formSignup").innerHTML;
+        var modal = document.getElementById("modal");
+        var killmodal =  document.getElementById("killmodal");
+        var modalContent = document.getElementById("modalcontent");
+
+    
+  
+     function scrollToSignup(){
+
+        modalContent.innerHTML = elmnt;
+
+        modal.style.display = "block"
+        killmodal.setAttribute("style", "position: absolute;top: 0; color: black;right: 0;padding: 10px;border: 1px solid gray;margin: 10px")
+    }
+
+  function killmodalButton(){
+    modal.style.display = "none"
+  }
+  
+</script>
                             
                         </div>
                      </div>
