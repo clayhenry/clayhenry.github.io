@@ -472,7 +472,7 @@ min-width: 400px;
 
                     <div class="subContent"> 
 
-                        <div class="bacgimg">
+                        <div class="bacgimg" style="margin-top: 60px;">
                             
                                 <div style="float: left"> 
                                         <img src="bacg1.png" class="animateImage" >
@@ -670,7 +670,12 @@ if((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('
 
 mobile = true;
 
-
+var req = new XMLHttpRequest();
+req.onload = function() {
+    document.getElementById('loadmobileHere').innerHTML = this.responseText;
+}
+req.open("get", "index_mobile.html", true);
+req.send();
 }
 
 
