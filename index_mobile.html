@@ -513,11 +513,7 @@ min-width: 400px;
                                         <br><hr><br>
                                     </div>
                                 </div>
-                              <div id="modal">
-                                    <div id="killmodal" onclick="killmodalButton()" style="display:none">X</div>
-                                    <div id="modalcontent"></div>
-
-                              </div>
+        
    
    <div class="form" id="formSignup">
    
@@ -589,20 +585,4 @@ min-width: 400px;
 
 <script>
 
-
-        var elmnt = document.getElementById("formSignup").innerHTML;
-        var modal = document.getElementById("modal");
-        var killmodal =  document.getElementById("killmodal");
-        var modalContent = document.getElementById("modalcontent");
-
-     function scrollToSignup(){
-
-     var elmnt = document.getElementById("formSignup");
-elmnt.scrollIntoView();
-    }
-
-  function killmodalButton(){
-    modal.setAttribute("style", "display:none")
-
-  }
 </script>

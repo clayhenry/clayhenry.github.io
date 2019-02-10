@@ -679,6 +679,16 @@ req.send();
 }
 
 
+        if(mobile){
+
+     function scrollToSignup(){
+
+                 var elmnt = document.getElementById("formSignup");
+                elmnt.scrollIntoView();
+                
+        } 
+    }else {
+
 
         var elmnt = document.getElementById("formSignup").innerHTML;
         var modal = document.getElementById("modal");
@@ -697,7 +707,8 @@ req.send();
     modal.setAttribute("style", "display:none")
 
   }
-
+  
+}
         //always start from top
         setTimeout(function() {
             window.scrollTo(0, 0)
