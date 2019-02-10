@@ -375,6 +375,31 @@ min-width: 400px;
 
     </style>
  <!-- <div class="logo">Logo</div> -->
+
+ <script>
+
+        var elmntfff = document.getElementById("formSignup").innerHTML;
+                var modalfff = document.getElementById("modal");
+                var killmodalfff =  document.getElementById("killmodal");
+                var modalContentfff = document.getElementById("modalcontent");
+        
+            
+          
+             function scrollToSignupfff(){
+        
+                modalContentfff.innerHTML = elmntfff;
+        
+                modalfff.style.display = "block"
+                killmodalfff.setAttribute("style", "position: absolute;top: 0; color: black;right: 0;padding: 10px;border: 1px solid gray;margin: 10px")
+            }
+        
+          function killmodalButtonfff(){
+            modal.style.display = "none"
+          }
+          
+        </script>
+
+
     <div id="container">
        
         <div id="default" class="sizemeup" style="background: white; width:100%;">
@@ -565,28 +590,7 @@ min-width: 400px;
     </div>
                             </div>
 
-<script>
 
-var elmntfff = document.getElementById("formSignup").innerHTML;
-        var modalfff = document.getElementById("modal");
-        var killmodalfff =  document.getElementById("killmodal");
-        var modalContentfff = document.getElementById("modalcontent");
-
-    
-  
-     function scrollToSignupfff(){
-
-        modalContentfff.innerHTML = elmntfff;
-
-        modalfff.style.display = "block"
-        killmodalfff.setAttribute("style", "position: absolute;top: 0; color: black;right: 0;padding: 10px;border: 1px solid gray;margin: 10px")
-    }
-
-  function killmodalButtonfff(){
-    modal.style.display = "none"
-  }
-  
-</script>
                             
                         </div>
                      </div>
