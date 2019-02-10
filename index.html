@@ -639,7 +639,15 @@ min-width: 400px;
     //scroll Event
 
 
+var mobile = false;
 
+if((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)){
+
+
+mobile = true;
+
+
+}
 
 
         var elmnt = document.getElementById("formSignup").innerHTML;
@@ -729,6 +737,8 @@ min-width: 400px;
         //sizeup();
 
         document.addEventListener("scroll", (e) => {
+
+            if(!mobile){
      
             currentContentsValues[1].querySelector(".bacgimg").style.marginTop = - (window.pageYOffset / 20) + 180  + "px";
             currentContentsValues[2].querySelector(".bacgimg").style.marginTop = - (window.pageYOffset / 20) + 260  + "px";
@@ -803,7 +813,7 @@ min-width: 400px;
 
                 sizeup()
             }
-          
+        }
         })
 
 
